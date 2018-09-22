@@ -1,0 +1,37 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<style>
+@font-face {
+	font-family: PermanentMarker-Regular;
+	src: url(PermanentMarker-Regular.ttf);
+	font-weight:400;
+}
+* {
+	font-face: PermanentMarker-Regular;
+}
+</style>
+<script src="snap.svg-min.js"></script>
+<script type="text/javascript">
+
+window.onload = function () {
+var s = Snap("#svgarea");
+var set = Snap.load("set2.svg",
+	function ( loadedFragment ) {
+		s.append( loadedFragment );
+			
+		var g = s.select("#girlWithHair");
+		g.drag();
+	} );	
+}
+
+</script>
+</head>
+<body style="background:#ffd4ffff;">
+<center>
+<h1>Witajcie w grze Juli!</h1><br/>
+<h2>Poziom pierwszy</h2>
+<svg id="svgarea" width="1280" height="640"></svg>
+</center>
+</body>
+</html>
