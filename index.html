@@ -20,6 +20,9 @@ h2 {
 p {
 	font-size: 24px;
 }
+svg {
+	box-shadow: 0px 0px 30px 5px grey;
+}
 </style>
 <script src="snap.svg-min.js"></script>
 <script type="text/javascript">
@@ -29,9 +32,10 @@ var s = Snap("#svgarea");
 var set = Snap.load("set2.svg",
 	function ( loadedFragment ) {
 		s.append( loadedFragment );
-			
-		var g = s.select("#girlWithHair");
-		g.drag();
+		s.select("#girlWithHair").drag();
+		s.select("#kiecka1").drag();
+		s.select("#kiecka2").drag();
+		s.select("#kiecka3").drag();
 	} );	
 }
 
@@ -43,7 +47,7 @@ var set = Snap.load("set2.svg",
 <center>
 <h1>Witajcie w grze Juli!</h1><br/>
 <h2>Poziom pierwszy</h2>
-<svg id="svgarea" width="1280" height="640"></svg><br/>
+<svg id="svgarea" width="1280" height="619"></svg><br/>
 <p>Grę majstrują Jula i Tata
 <img src="jula_tata2.jpg" style="width:150px; margin:50px 50px" align="middle">
 </p>
